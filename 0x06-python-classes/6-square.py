@@ -9,13 +9,13 @@ Prints squares in stdout.
 class Square:
     """Initializes the Square data"""
     def __init__(self, size=0, position=(0, 0)):
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
         """Returns square"""
-        return (self.__size)
+        return self.__size
 
     @size.setter
     def size(self, value):
@@ -30,21 +30,20 @@ class Square:
     @property
     def position(self):
         """Returns position"""
-        return (self.__position)
+        return self.__position
 
     @position.setter
     def position(self, value):
         """sets conditions for the value of the square position"""
         if type(value) is not tuple:
             raise TypeError("position must be a tuple of 2 positive integers")
-        elif len(value) is not 2:
+        if len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-        elif value[0] < 0 or value[1] < 0:
+        if type(value[0]) is not int or type(value[1]) is not int:
             raise TypeError("position must be a tuple of 2 positive integers")
-        elif type(value[0]) is not int or type(value[1]) is not int:
+        if value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
-        else:
-            self.__position = value
+        self.__position = value
 
     """Get the area of a square"""
     def area(self):
