@@ -1,0 +1,75 @@
+The ``0-add_integer`` module
+============================
+
+Using ``add_integer``
+-------------------------
+
+Importing function from the module:
+	  >>> add_integer = __import__('0-add_integer').add_integer
+
+int + float:
+	  >>> add_integer(1, 2.3)
+	  3
+
+float + int:
+	  >>> add_integer(2.3, 1)
+	  3
+
+float NaN + float:
+	  >>> add_integer(float('NaN'), 5.2)
+	  Traceback (most recent call last):
+	  ValueError: cannot convert float NaN to integer
+
+float + float NaN:
+	  >>> add_integer(5.632452, float('NaN'))
+	  Traceback (most recent call last):
+	  ValueError: cannot convert float NaN to integer
+
+float inf + float:
+	  >>> add_integer(float('inf'), 4.532532)
+	  Traceback (most recent call last):
+	  OverflowError: cannot convert float infinity to integer
+
+float + float inf:
+	  >>> add_integer(3.653253, float('inf'))
+	  Traceback (most recent call last):
+	  OverflowError: cannot convert float infinity to integer
+
+int + int:
+	  >>> add_integer(20, 45)
+	  65
+
+big int + big int in negative:
+	  >>> add_integer(20424235, -24152565)
+	  -3728330
+
+bit float + big float negative:
+	  >>> add_integer(2.53436553253, -6.5325324214214)
+	  -4
+
+string + int:
+	  >>> add_integer("a", 2)
+	  Traceback (most recent call last):
+	  TypeError: a must be an integer
+
+negative + negative:
+	  >>> add_integer(-6, -2)
+	  -8
+
+None + int:
+	  >>> add_integer(None, 2)
+	  Traceback (most recent call last):
+	  TypeError: a must be an integer
+
+negative + int:
+	  >>> add_integer(-0.1, 20)
+	  20
+
+zero + zero:
+	  >>> add_integer(0, 0)
+	  0
+
+empty:
+	  >>> add_integer()
+	  Traceback (most recent call last):
+	  TypeError: add_integer() missing 1 required positional argument: 'a'
