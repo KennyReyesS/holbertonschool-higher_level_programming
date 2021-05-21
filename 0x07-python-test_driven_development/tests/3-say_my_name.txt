@@ -7,51 +7,75 @@ Using ``say_my_name``
 Importing function from the module:
 	  >>> say_my_name = __import__('3-say_my_name').say_my_name
 
+First Name only:
 	  >>> say_my_name("Bob")
 	  My name is Bob 
 
+First name and last name:
 	  >>> say_my_name("John Smith")
 	  My name is John Smith 
 
+Int and last name:
 	  >>> say_my_name(252, "Smith")
 	  Traceback (most recent call last):
 	  TypeError: first_name must be a string
 
+First name and int:
 	  >>> say_my_name("John", 242)
 	  Traceback (most recent call last):
 	  TypeError: last_name must be a string
 
+List and last name:
 	  >>> say_my_name(["John", "Smith"], "Smith")
 	  Traceback (most recent call last):
 	  TypeError: first_name must be a string
 
+First name and list:
 	  >>> say_my_name("John", ["John", "Smith"])
 	  Traceback (most recent call last):
 	  TypeError: last_name must be a string
 
+None and last name:
 	  >>> say_my_name(None, "Smith")
 	  Traceback (most recent call last):
 	  TypeError: first_name must be a string
 
+First name and None:
 	  >>> say_my_name("John", None)
 	  Traceback (most recent call last):
 	  TypeError: last_name must be a string
 
+String with spaces and last name:
 	  >>> say_my_name("  ", "Smith")
 	  My name is    Smith
 
+First name and string with spaces:
 	  >>> say_my_name("John", "  ")
 	  My name is John   
 
+String with spaces:
 	  >>> say_my_name("  ", "  ")
 	  My name is      
 
+Empty string and Empty string
 	  >>> say_my_name("", "")
 	  My name is  
 
+First name with 2 names and last name:
 	  >>> say_my_name("John Smith", "Smith")
 	  My name is John Smith Smith
 
+int and int:
+	  >>> say_my_name(642, 423)
+	  Traceback (most recent call last):
+	  TypeError: first_name must be a string
+
+float and float:
 	  >>> say_my_name(232.352, 241.4353)
 	  Traceback (most recent call last):
 	  TypeError: first_name must be a string
+
+No arguments:
+	  >>> say_my_name()
+	  Traceback (most recent call last):
+	  TypeError: say_my_name() missing 1 required positional argument: 'first_name'
