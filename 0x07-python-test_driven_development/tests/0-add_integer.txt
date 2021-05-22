@@ -7,6 +7,10 @@ Using ``add_integer``
 Importing function from the module:
 	  >>> add_integer = __import__('0-add_integer').add_integer
 
+1 argument:
+	  >>> add_integer(2)
+	  100
+
 int + float:
 	  >>> add_integer(1, 2.3)
 	  3
@@ -52,6 +56,20 @@ string + int:
 	  Traceback (most recent call last):
 	  TypeError: a must be an integer
 
+int + string;
+	  >>> add_integer(2, "a")
+	  Traceback (most recent call last):
+	  TypeError: b must be an integer
+
+list + int
+	  >>> add_integer([6, 3, 5], 2)
+	  Traceback (most recent call last):
+	  TypeError: a must be an integer
+
+	  >>> add_integer(2, [6, 3, 5])
+	  Traceback (most recent call last):
+	  TypeError: b must be an integer
+
 negative + negative:
 	  >>> add_integer(-6, -2)
 	  -8
@@ -64,6 +82,9 @@ None + int:
 negative + int:
 	  >>> add_integer(-0.1, 20)
 	  20
+
+	  >>> add_integer(-0.1, -2.4)
+	  -2
 
 zero + zero:
 	  >>> add_integer(0, 0)
