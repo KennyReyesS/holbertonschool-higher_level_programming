@@ -21,3 +21,12 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_zero(self):
         self.assertEqual(max_integer([0]), 0)
+
+    def test_maxend(self):
+        self.assertEqual(max_integer([1, 2, 3]), 3)
+
+    def test_maxbeg(self):
+        self.assertEqual(max_integer([3, 2, 1]), 3)
+
+    def test_empty(self):
+        self.assertEqual(max_integer([]), None)
