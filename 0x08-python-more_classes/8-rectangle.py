@@ -80,7 +80,6 @@ class Rectangle:
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     @staticmethod
-    """returns the biggest rectangle based on the area"""
     def bigger_or_equal(rect_1, rect_2):
         """sets conditions"""
         if not isinstance(rect_1, Rectangle):
