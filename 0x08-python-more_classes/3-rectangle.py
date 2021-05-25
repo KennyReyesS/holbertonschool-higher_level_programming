@@ -50,14 +50,14 @@ class Rectangle:
             return 0
         if self.__height == 0:
             return 0
-        return (self.__width * 2 + self.__height * 2)
+        return (self.__width * 2) + (self.__height * 2)
 
     """Print the rectangle with the character #"""
     def __str__(self):
         """Return the rectangle in '#' without new line at the final"""
-        rectangle = ""
         if self.__width == 0 or self.__height == 0:
             return ""
+        rectangle = ""
         for i in range(self.__height):
             for j in range(self.__width):
                 rectangle += "#"
