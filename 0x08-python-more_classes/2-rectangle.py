@@ -1,14 +1,15 @@
 #!/usr/bin/python3
-"""
+"""Class Rectangle.
 Class Rectangle that defines a rectangle.
 """
 
 
 class Rectangle:
+    """Class Rectangle"""
     def __init__(self, width=0, height=0):
         """Initializes the Rectangle data"""
-        self.height = height
         self.width = width
+        self.height = height
 
     @property
     def height(self):
@@ -43,11 +44,11 @@ class Rectangle:
     """Get the area of a Rectangle"""
     def area(self):
         """Return the rectangle area"""
-        return (self.__height * self.__width)
+        return self.__height * self.__width
 
     """Get the perimeter of a Rectangle"""
     def perimeter(self):
         """Return the rectangle perimeter"""
         if self.__width == 0 or self.__height == 0:
             return 0
-        return (self.__width * 2 + self.__height * 2)
+        return (self.__width * 2) + (self.__height * 2)
