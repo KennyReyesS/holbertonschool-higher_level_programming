@@ -10,11 +10,12 @@ def roman_to_int(roman_string):
         'L': 50,
         'C': 100,
         'D': 500,
-        'M': 1000
-}
+        'M': 1000}
+    num = 0
     for i in range(len(roman_string)):
-        for key in d_roman:
-            if roman_string[i] == key:
-                new_list.append(d_roman[key])
-    suma = sum(new_list)
-    return (suma)
+        if i + 1 != len(roman_string) and \
+           d_roman[roman_string[i]] < d_roman[roman_string[i + 1]]:
+            num = num - d_roman[roman_string[i]]
+        else:
+            num = num + d_roman[roman_string[i]]
+    return (num)

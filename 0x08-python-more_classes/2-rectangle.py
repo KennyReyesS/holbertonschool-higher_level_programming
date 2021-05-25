@@ -20,9 +20,10 @@ class Rectangle:
         """sets conditions for the height of the Rectangle"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("height must be >= 0")
-        self.__height = value
+        else:
+            self.__height = value
 
     @property
     def width(self):
@@ -34,9 +35,10 @@ class Rectangle:
         """sets conditions for the width of the Rectangle"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("width must be >= 0")
-        self.__width = value
+        else:
+            self.__width = value
 
     """Get the area of a Rectangle"""
     def area(self):
@@ -46,8 +48,6 @@ class Rectangle:
     """Get the perimeter of a Rectangle"""
     def perimeter(self):
         """Return the rectangle perimeter"""
-        if self.__width == 0:
-            return 0
-        if self.__height == 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width * 2 + self.__height * 2)
