@@ -7,4 +7,4 @@ except if the new instance attribute is called
 
 class LockedClass:
     """__slots__ attribute"""
-    __slots__ = ["firts_name"]
+    __slots__ = ["first_name"]
