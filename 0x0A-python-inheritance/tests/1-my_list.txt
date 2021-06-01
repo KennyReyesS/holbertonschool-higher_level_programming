@@ -32,6 +32,15 @@ Negative and positive number:
 	  >>> my_list.print_sorted()
 	  [-9, -6, -3, -2, -1, 2]
 
+	  >>> my_list = MyList()
+	  >>> my_list.append(1)
+	  >>> my_list.append("hello")
+	  >>> print(my_list)
+	  [1, 'hello']
+	  >>> my_list.print_sorted()
+	  Traceback (most recent call last):
+	  TypeError: unorderable types: str() < int()
+
 1 Argument in append:
 	  >>> my_list = MyList()
 	  >>> my_list.append(1)
