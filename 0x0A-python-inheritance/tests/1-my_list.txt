@@ -32,7 +32,7 @@ Negative and positive number:
 	  >>> my_list.print_sorted()
 	  [-9, -6, -3, -2, -1, 2]
 
-1 Argument:
+1 Argument in append:
 	  >>> my_list = MyList()
 	  >>> my_list.append(1)
 	  >>> print(my_list)
@@ -46,6 +46,14 @@ Empty:
 	  []
 	  >>> my_list.print_sorted()
 	  []
+
+None:
+	  >>> my_list = MyList()
+	  >>> my_list.append(None)
+	  >>> print(my_list)
+	  [None]
+	  >>> my_list.print_sorted()
+	  [None]
 
 String + int:
 	  >>> my_list = MyList()
