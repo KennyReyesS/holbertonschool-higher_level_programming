@@ -46,3 +46,11 @@ class Base:
             my_file = cls.__name__ + ".json"
             with open(my_file, 'w', encoding='utf-8') as f:
                 f.write(json_str)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """returns the list of the JSON string representation json_string"""
+        if json_string is None:
+            return []
+        else:
+            return json.loads(json_string)
