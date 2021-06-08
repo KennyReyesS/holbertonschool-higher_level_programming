@@ -42,10 +42,11 @@ class Base:
         else:
             for i in list_objs:
                 new.append(i.to_dictionary())
-            json_str = cls.to_json_string(new)
-            my_file = cls.__name__ + ".json"
-            with open(my_file, 'w', encoding='utf-8') as f:
-                f.write(json_str)
+
+        json_str = cls.to_json_string(new)
+        my_file = cls.__name__ + ".json"
+        with open(my_file, 'w', encoding='utf-8') as f:
+            f.write(json_str)
 
     @staticmethod
     def from_json_string(json_string):
