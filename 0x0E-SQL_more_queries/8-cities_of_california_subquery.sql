@@ -8,6 +8,4 @@ WHERE state_id = (
 SELECT id FROM states
 WHERE name = 'California')
 
-GROUP BY id, name
-
 ORDER BY id DESC;
