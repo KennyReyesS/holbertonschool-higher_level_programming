@@ -15,7 +15,7 @@ if __name__ == "__main__":
                  format(argv[4]))
     data = curs.fetchall()
     for row in data:
-        if row[1] == state:
+        if row[1] == argv[4]:
             print(row)
     curs.close()
     db.close()
