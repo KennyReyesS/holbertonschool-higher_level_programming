@@ -5,7 +5,7 @@
 
 
 import requests
-from sys import requests
+from sys import argv
 
 
 if __name__ == "__main__":
@@ -13,4 +13,4 @@ if __name__ == "__main__":
     emailaddrs = argv[2]
     values = {'email': emailaddrs}
     response = requests.post(url, data = values)
-    print("Your email is: {}".format(response.text))
+    print(response.text)
