@@ -10,8 +10,9 @@ from sys import argv
 
 if __name__ == "__main__":
     url = argv[1]
+    emailadrs = argv[2]
 
-    values = '{email: argv[1]}'
+    values = {'email': emailadrs}
 
     data = parse.urlencode(values)
 
@@ -21,4 +22,4 @@ if __name__ == "__main__":
 
     with request.urlopen(req) as response:
         html = response.read()
-    print(html)
+    print(html.decode('utf-8'))
