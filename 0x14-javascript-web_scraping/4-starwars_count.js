@@ -22,6 +22,6 @@ request(url, function (error, response, body) {
       console.log(n);
     }
   } catch (error) {
-      console.error(error);
+    console.error(error);
   }
 });
