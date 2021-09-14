@@ -7,7 +7,7 @@ const url = 'https://swapi-api.hbtn.io/api/films/';
 const urlComplete = url + urlId;
 
 request(urlComplete, function (error, response, body) {
-  var respJson = JSON.parse(body);
+  const respJson = JSON.parse(body);
   if (error) {
     console.log(error);
   } else {
